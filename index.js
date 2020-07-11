@@ -95,7 +95,7 @@ function handleConnection(conn) {
 
 function convertTLCInputToModel(inputArray) {
     if(inputArray != null && inputArray.length) {
-        const tlcModel = TLCModel({
+        const tlcModel =  {
             Header: inputArray[0],
             IMEI: inputArray[1],
             DeviceModel: inputArray[2],
@@ -147,7 +147,7 @@ function convertTLCInputToModel(inputArray) {
             OdomerterConfiguration: inputArray[48],
             AccelerometerConfiguration: inputArray[49],
             AccelerometerGValue: inputArray[50]
-        })
+        }
 
         return tlcModel;
     }
